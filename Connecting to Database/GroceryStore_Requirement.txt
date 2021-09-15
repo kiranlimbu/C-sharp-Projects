@@ -1,0 +1,57 @@
+I have a grocery store.
+I would like to take online delivery order.
+
+I want a website where it can take online delivery order.
+In the website I want,
+1. General information about my store
+2. Review page where everyone can see the feedback.
+3. online form where my customers can select items they want delivered. 
+4. Payment method
+5. Contact page for my customers to reach out to me.
+
+
+note:
+I want a user interface where I can make changes to order form without having to code. Example i want to add a vegitable or discountinue a vegtable. I want to change expected delivery date.
+
+I want to store order information and shipping information. For example, who ordered, what they ordered, and where they ordered from and where they shipping it to. This will help me predict where my customers are from and what are my most popular items.
+
+Only logged in member can add, edit, delete feedback. Everyone can see feedback.
+
+---------------------
+I sell vegetable by box
+
+1. large box - 10 items
+2. small box - 7 items
+
+items:
+1. Carrot
+2. Banana
+3. Lemon
+4. Spinich
+5. Coriander
+6. Radish
+7. Sweet Potato
+8. Green Capsicum
+9. Ginger
+10. Tomatoes
+11. Garlic
+12. Cucumber
+13. Cabbage
+14. Cauliflower
+15. Green Beans
+16. Pak Choy
+17. Avocado
+18. Mushroom
+19. Broccoli
+20. Onion
+ 
+Add ons:
+1. Meats
+	a. Chicken - $8.00
+	b. Pork - $10.00
+	c. Beef - $12.00
+
+2. Dairy
+	a. Milk - $3.00
+	b. Cheese - $5.00
+	c. Egg - $4.00

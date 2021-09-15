@@ -1,0 +1,41 @@
+@model IEnumerable<GroceryStore.Models.GroceryItem>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Select 7 items:</h1>
+<div>
+    <table>
+        <tbody>
+            <tr style="border-bottom: solid;">
+                <td></td>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemID)
+                    </td>
+                    <td style="padding-left: 5px">                      
+                        @Html.DisplayFor(modelItem => item.ItemName)                  
+                    </td>
+                    <td style="padding-left: 5px">                      
+                        @Html.DisplayFor(modelItem => item.ItemPrice)                  
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <p>
+        <a asp-action="Create">Add New Grocery Item</a>
+    </p>
+</div>
