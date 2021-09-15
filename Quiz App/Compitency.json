@@ -1,0 +1,97 @@
+{"Questions":
+[
+{"Id":1,"Quiz":"By default, when you create a model from a database, the Entity Designer automatically generates the mappings from the data source to the conceptual model.","Answer":{"True":true,"False":false}},
+
+{"Id":2,"Quiz":"Deserialization is the process of converting data to a format that can be persisted or transported.","Answer":{"True":false,"False":true}},
+
+{"Id":3,"Quiz":"Stack can be described as:","Answer":{"A general-purpose list that stores a linear collection of objects.":false,"A general-purpose dictionary class that stores a collection of key/value pairs.":false,"A first in, first out collection of objects.":false,"A first in, last out collection of objects.":true}},
+
+{"Id":4,"Quiz":"You want to apply a highlighting effect to selected items in a ListBox. How should you proceed?","Answer":{"Create a Style element and set the TargetType attribute to ListBox. Use a DoubleAnimation\r\n element to apply the highlighting effect when a list box item is selected.":false,"Create a Style element and set the TargetType attribute to ListBox. Use a Storyboard \r\nelement to apply the highlighting effect when a list box item is selected.":false,"Create a Style element and set the TargetType attribute to ListBox. Use a EventTrigger \r\nelement to apply the highlighting effect when a list box item is selected.":false,"Create a Style element and set the TargetType attribute to ListBox. Use a Setter element to\r\n apply the highlighting effect.":false,"Create a Style element and set the TargetType attribute to ListBox. Use a Trigger element \r\nto apply the highlighting effect when a list box item is selected.":true}},
+
+{"Id":5,"Quiz":"You want to ensure that no more than five threads can access a resource at any one time. Which synchronization primitive should you use?","Answer":{"The CountdownEvent class.":true,"The Barrier class.":false,"The SemaphoreSlim class.":false,"The ReaderWriterLockSlim class.":false,"The ManualResetEventSlim class":false}},
+
+{"Id":6,"Quiz":"You want to create a custom generic class. The class will consist of a linear collection of values, and will enable developers to queue item from either end of the collection. Which of the following should your class declaration resemble?","Answer":{"public class DoubleEndedQueue<T>:IList<T>.":true,"public class DoubleEndedQueue<T>:IList<T>, IEnumerable<T>.":false,"public class DoubleEndedQueue<T>:IEnumerable<T>.":false,"public class DoubleEndedQueue<T>:IDictionary<TKey, TValue>.":false,"public class DoubleEndedQueue<T>:ICollection<T>":false}},
+
+{"Id":7,"Quiz":"Arrays are zero-indexed, so the first element in any dimension in an array is at index zero. The last element in a dimension is at index N-1, where N is the size of the dimension. If you attempt to access an element outside this range, the CLR throws an IndexOutOfRangeException exception.","Answer":{"True":true,"False":false}},
+
+{"Id":8,"Quiz":"You can only include abstract members within abstract classes.","Answer":{"True":false,"False":true}},
+
+{"Id":9,"Quiz":"Type safety relies on the compiler being able to compile or interpret each of the components that the solution references. When interoperating with unmanaged components, the compile-time type-safety check is not always possible.","Answer":{"True":true,"False":false}},
+
+{"Id":10,"Quiz":"The public and private keys are mathematicaly linked, in that the private key is used to derive the public key. However, you cannot derive a private key from a public key. Also, you can only decrypt data by using the private key that is linked to the public key that was used to encrypt the data.","Answer":{"True":true,"False":false}},
+
+{"Id":11,"Quiz":"You can not add a finally block to code that has no catch block.","Answer":{"True":false,"False":true}},
+
+{"Id":12,"Quiz":"You are reviewing some code that uses CodeDOM to generate managed Visual C# at run time. What does the following line of code do?\r\nvar method = new CodeEntryPointMethod();","Answer":{"Defines an instance method named Main.":true,"Defines an instance method with a random name.":false,"Defines a static named Main.":false,"Defines an instance method named EntryPoint.":false}},
+
+{"Id":13,"Quiz":"Enumerations and partial classes that are implimented in an EDM do not propagate through WCF Data Services. If you want to expose enumerations and extensions to partial classes, you should include these types in a separate assembly that you can reference in the service and client application directly.","Answer":{"True":true,"False":false}},
+
+{"Id":14,"Quiz":"THROW differs from RAISERROR in several ways:\r\n.Errors raised by THROW are always severity 16.\r\n.The  messages returned by THROW are not related to any entries in sys.sysmessages.\r\n.Errors raised by THROW only cause transaction abort when used in conjuction with SET XACT_ABORT ON and the session is terminated.","Answer":{"True":true,"False":false}},
+
+{"Id":15,"Quiz":"SQL Server Windows function provides a framing option. It allows you to specity a further subset of rows within a window partition by setting upper and lower boundaries for the window frame, which presents rows to the window function.","Answer":{"True":true,"False":false}},
+
+{"Id":16,"Quiz":"SQL Server can implicity convert an int data type to a varchar.","Answer":{"True":false,"False":true}},
+
+{"Id":17,"Quiz":"Which columns should appear in the SELECT list of a subquery following the EXISTS predicate.","Answer":{"Join column":false,"Primary key column":false,"An * for all the columns":true}},
+
+{"Id":18,"Quiz":"In a SELECT statement a WHERE clause will always be evaluated after the FROM clause and before a GROUP BY clause, if one exists.","Answer":{"True":true,"False":false}},
+
+{"Id":19,"Quiz":"A WHILE loop will exit when the predicate evaluates to NULL.","Answer":{"True":true,"False":false}},
+
+{"Id":20,"Quiz":"The presence of a foreign key reference to a table prevents TRUNCATE TABLE from executing successfully.","Answer":{"True":true,"False":false}},
+
+{"Id":21,"Quiz":"ROLLUP subclause infers a hierarchy of columns to create meaningful grouping sets.","Answer":{"True":true,"False":false}},
+
+{"Id":22,"Quiz":"What is the name for a function that returns a single value?","Answer":{"Rowset Function":false,"Scalar Function":true,"Single value Function":false,"Aggregate Function":false}},
+
+{"Id":23,"Quiz":"Table-valued functions allow variables to be passed in as parameters to the expression.","Answer":{"True":true,"False":false}},
+
+{"Id":24,"Quiz":"Which of the following sstatements use correct column aliases?","Answer":{"SELECT Names AS ProductName FROM Production.Product":true,"SELECT ProductName == Name FROM Production.Product":false,"SELECT Names = ProductName FROM Production.Product":false,"SELECT Names AS Product Name FROM Production.Product":false}},
+
+{"Id":25,"Quiz":"You have a table named PoolCars and a table named Bookings in your ResourcesScheduling database. You want to return all the pool cars for which there are zero bookings. Which of the following queries should you use?","Answer":{"SELECT pc.ID, pc.Make, pc.Model, pc.LicensePlate\r\nFROM ResourcesScheduling.PoolCars AS pc\r\nJOIN ResourcesScheduling.Bookings AS b\r\nON pc.ID = b.CarID;":false,"SELECT pc.ID, pc.Make, pc.Model, pc.LicensePlate\r\nFROM ResourcesScheduling.PoolCars AS pc\r\nRIGHT OUTER JOIN ResourcesScheduling.Bookings AS b\r\nON pc.ID = b.CarID;":false,"SELECT pc.ID, pc.Make, pc.Model, pc.LicensePlate\r\nFROM ResourcesScheduling.PoolCars AS pc\r\nLEFT OUTER JOIN ResourcesScheduling.Bookings AS b\r\nON pc.ID = b.CarID\r\nWHERE b.BookingID IS NULL;":true,"SELECT pc.ID, pc.Make, pc.Model, pc.LicensePlate\r\nFROM ResourcesScheduling.PoolCars AS pc ResourcesScheduling.Bookings AS b\r\nON pc.ID = b.CarID;":false}},
+
+{"Id":26,"Quiz":"You have a table of employees and a table of customers, both of which contain a column holding the name of the country where the customer or employee is located. You want to know which countries have at least one customer and at least one employee. Which set operator should you use?","Answer":{"UNION":false,"EXCEPT":false,"UNION ALL":false,"INTERSECT":true}},
+
+{"Id":27,"Quiz":"Errors raised by THROW only cause transaction abort when used in conjunction with SET XACT_ABORT ON and the session is terminated","Answer":{"True":true,"False":false}},
+
+{"Id":28,"Quiz":"When constructing dynamic SQL, sp_executesql allows parameters to be passed at runtime.","Answer":{"True":true,"False":false}},
+
+{"Id":29,"Quiz":"The physical order of rows in a SQL Server table guarantee any sort order in queries using the table.","Answer":{"True":false,"False":true}},
+
+{"Id":30,"Quiz":"All columns in SELECT, HAVING, and ORDER BY must appear in the GROUP BY clause or be inputs to aggregate expressions.","Answer":{"True":true,"False":false}},
+
+{"Id":31,"Quiz":"A SQL Server database can be stored across multiple instances.","Answer":{"True":false,"False":true}},
+
+{"Id":32,"Quiz":"When you add a new controller to an MVC application, Visual Studio presents scaffolding options to help you create action methods and associated views.","Answer":{"True":true,"False":false}},
+
+{"Id":33,"Quiz":"You are using the [HandleError] annotation to catch exceptions in your web application. However, you realize that[HandleError] catches all exceptions, making it difficult for you to isolate a specific issue. What can you do to narrow down the exceptions that the [HandleError] annotation is catching? Choose all that apply.","Answer":{"Use the Exception Type property, so that only exceptions of a specific type are caught.":true,"Configure IntelliTrace to enable event recording.":false,"Use try/catch blocks to intercept errors at the method level.":false,"All of the above.":false}},
+
+{"Id":34,"Quiz":"Which programming model has the simplest method of building a user interface?","Answer":{"Web Pages":false,"MVC":false,"Web Forms":true}},
+
+{"Id":35,"Quiz":"jQuery is a JavaScript library that you can use to access the HTML DOM elements. jQuery UI is not just a JavaScript library; it also includes UI elements.","Answer":{"True":true,"False":false}},
+
+{"Id":36,"Quiz":"SignalR is a set of components that simplifies the development of bidirectional real-time web applications, such as chat rooms in websites and uses WebSockets wherever possible to connect.","Answer":{"True":true,"False":false}},
+
+{"Id":37,"Quiz":"Session management enables web applications to store values for multiple HTTP requests, regardless of whether the request is directed to the same page or multiple pages.","Answer":{"True":true,"False":false}},
+
+{"Id":38,"Quiz":"What scenarios would require you to prevent caching for a web application? Choose all that apply.","Answer":{"If an application involves frequent content updates.":false,"The use of caching prevents users from viewing these content updates":false,"If an application contains sensitive data":false,"All of the above":true}},
+
+{"Id":39,"Quiz":"You want to render an HTML5<audio> tag to play a sound file from an action. Which helper would you use?","Answer":{"Url.ActionLink()":false,"Url.Action()":false,"Html.ActionLink()":true,"Html.SoundLink()":false}},
+
+{"Id":40,"Quiz":"What are the key benefits of using Expression Blend for HTML to edit CSS?","Answer":{"Includes CSS tools that enable you to generate and edit CSS styles on the graphical user \r\ninterface":false,"Helps separate graphic design and coding.":true,"Enables developers to visualize the result of the design, HTML, CSS, and JavaScript, by \r\ndisplaying results on the screen while they edit the code.":false,"All of the above":false}},
+
+{"Id":41,"Quiz":"What is the difference between SimpleRoleProvider and SqlRoleProvider?","Answer":{"SimpleRoleProvider works with any database supported by Entity Framework, whereas \r\nSqlRoleProvider works only on a fixed schema.":false,"SimpleRoleProvider works with developer-selected tables and columns, whereas \r\nSqlRoleProvider works any database supported by Entity Framework":false,"SimpleRoleProvider works only on a fixed schema, whereas \r\nSqlRoleProvider works with developer-selected tables and columns.":false,"SimpleRoleProvider works with developer-selected tables and columns, whereas \r\nSqlRoleProvider works only on a fixed schema.":true}},
+
+{"Id":42,"Quiz":"The purpose of configuring the machineKey element in the Web.config file ensures that the same key is used for encrypting and decrypting content stored in the session state or configuration file.","Answer":{"True":true,"False":false}},
+
+{"Id":43,"Quiz":"A model binder is a component of an ASP.NET MVC application that creates an instance of a model class, based on the data sent in the request fromm the web browser.","Answer":{"True":true,"False":false}},
+
+{"Id":44,"Quiz":"By default, Web API exposes all public methods as REST services. You can prevent this by making the funciton private, but this action prevents application code in the same project from accessing the function. Therefore, you can use the NonAction attribute for functions that need to be in public, but do not need to be exposed in REST.","Answer":{"True":true,"False":false}},
+
+{"Id":45,"Quiz":"Which tools enable you to debug a Windows Azure application?","Answer":{"Remote desktop":true,"Intellitrace":false,"Diagnostics Log":false,"All of the above":false}},
+
+{"Id":46,"Quiz":"Template views in ASP.NET MVC web applications perform the same role as master pages in ASP.NET Web Forms applications.","Answer":{"True":true,"False":false}},
+
+{"Id":47,"Quiz":"You have implemented the MVC Site Map Provider in your web application and used it to build menus and breadcrumb trails with which users can navigate the logical hierarchy. MVC automatically takes routes from the MVC Site Map Provider so the same hierarchy is used in URLs.","Answer":{"True":false,"False":true}},
+]
+}
