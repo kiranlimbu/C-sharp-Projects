@@ -1,0 +1,5 @@
+{"UserName":"NvqnO","Pin":"8979","FirstName":"Aida","LastName":"Bugg","Role":"Admin","AccountType":null,"Balance":0,"Status":"Active","AccountNo":1}
+{"UserName":"QnivqL","Pin":"8765","FirstName":"David","LastName":"Young","Role":"Customer","AccountType":"Checking","Balance":5160,"Status":"Active","AccountNo":2}
+{"UserName":"xvenay","Pin":"5056","FirstName":"Srijana","LastName":"Limbu","Role":"Customer","AccountType":"Checking","Balance":9880,"Status":"Active","AccountNo":3}
+{"UserName":"xvenay","Pin":"8979","FirstName":"Kiran","LastName":"Limbu","Role":"Admin","AccountType":null,"Balance":0,"Status":"Disabled","AccountNo":4}
+{"UserName":"QbaalY","Pin":"9012","FirstName":"Donny","LastName":"Long","Role":"Customer","AccountType":"Checking","Balance":3500,"Status":"Disabled","AccountNo":5}
