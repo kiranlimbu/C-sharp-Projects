@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Text;
 
 public class Logic
 {
@@ -138,9 +137,11 @@ public class Logic
     // print account detail
     public void printAccDetail(User customer)
     {
-        Console.WriteLine($"\nAccount No: {customer.AccountNo}\n" +
+        Console.WriteLine($"Account No: {customer.AccountNo}\n" +
                           $"Type: {customer.AccountType}\n" +
                           $"Balance: {customer.Balance}\n\n" +
+
+                          "You can update below information:\n\n" + 
                           $"1. Name: {customer.FirstName + " " + customer.LastName}\n" +
                           $"2. Status: {customer.Status}");
     }
@@ -153,7 +154,7 @@ public class Logic
 
         while (state)
         {
-            Console.Write("\nUsername: ");
+            Console.Write("Username: ");
             string tempName = Console.ReadLine();
             
             if (isValidName(tempName))
@@ -204,12 +205,15 @@ public class Logic
             }
             catch (Exception)
             {
-                Console.WriteLine("\nInvalid Input! Please try again.\n");
+                Console.WriteLine("\nInvalid Input!\n");
             }
         }
 
         return userAccount;
     }
+
+
+    // Admin Menu ----------------------------------------------------
 
     // create new account
     public void createAccount()
@@ -304,9 +308,13 @@ public class Logic
                     data.deleteFromFile(userA);
                     Console.WriteLine("\nAccount deleted Successfully.\n");
                 }
-                else if (!input.ToLower().StartsWith("n"))
+                else if (input.ToLower().StartsWith("n"))
                 {
-                    Console.WriteLine("\nInvalid input! Please try again.");
+                    Console.WriteLine("\nOperation aborted!");
+                }
+                else
+                {
+                    Console.WriteLine("\nInvalid Input!");
                     goto deleteConfirm;
                 }
             }
@@ -328,11 +336,12 @@ public class Logic
         if (data.isInFile(accNumber, out User customer))
         {
             // display the account detail
+            Console.WriteLine("\n------ Account Information ------");
             printAccDetail(customer);
             Console.WriteLine($"3. UserName: {encryption(customer.UserName)}\n" + // decrypt and display
                               $"4. Pin: {encryption(customer.Pin)}\n" + // decrypt and display
                               $"5. Submit\n");
-                              
+            
             updateOptions:
             {
                 Console.Write("\nWhat would you like to update? ");
@@ -388,7 +397,7 @@ public class Logic
                 {
                     // update the file
                     data.updateInFile(customer);
-                    Console.WriteLine($"\nAccount #{customer.AccountNo} has been successfully been updated.");
+                    Console.WriteLine($"\nAccount #{customer.AccountNo} has been successfully updated.");
                 }
                 else
                 {
@@ -462,7 +471,7 @@ public class Logic
         Data data = new Data();
         List<User> list = data.ReadFile<User>("user.txt");
 
-        List<User> outList = new List<User>();
+        List<User> outList = new List<User>(); // output variable for more then one record
         if (list.Count > 0)
         {
             foreach (User row in list)
@@ -499,7 +508,6 @@ public class Logic
                 user.AccountType == row.AccountType && 
                 user.Status == row.Status)
                 {
-                    Console.WriteLine(row.AccountNo);
                     outList.Add(row);
                 }
             }
@@ -531,6 +539,7 @@ public class Logic
     // View Report
     public void ViewReports()
     {
+        bool zeroRecords = true; // initailly searched & found record is zero
         getOption:
         {
             Console.WriteLine("1 - Accounts by Balance\n" +
@@ -541,7 +550,7 @@ public class Logic
             // By amount
             if (option == "1")
             {
-                Console.WriteLine("Please provide start and end amount");
+                Console.WriteLine("\nPlease provide start and end amount");
                 double min, max;
                 getMin:
                 {
@@ -565,7 +574,7 @@ public class Logic
                     }
                     catch (Exception)
                     {
-                        Console.WriteLine("Invalid Input!");
+                        Console.WriteLine("\nInvalid Input!\n");
                         goto getMax;
                     }
                 }
@@ -593,10 +602,16 @@ public class Logic
                             $"Account Type: {row.AccountType}\n" +
                             $"Account Status: {row.Status}\n" + 
                             $"Account Balance: {row.Balance}\n");
+                            zeroRecords = false;
                         }
                     }
                 }
                 else
+                {
+                    Console.WriteLine("File is Empty!");
+                }
+
+                if (zeroRecords) 
                 {
                     Console.WriteLine("No Matching Data Found!");
                 }
@@ -604,14 +619,14 @@ public class Logic
             // By Date
             else if (option == "2")
             {
-                Console.WriteLine("Please provide start and end dates");
+                Console.WriteLine("\nPlease provide start and end dates");
                 string startDate, endDate;
                 string formatString = "dd/MM/yyyy";
                 DateTime d1, d2;
 
                 getSatrtDate:
                 {
-                    Console.Write("Enter start date (dd/MM/yyyy): ");
+                    Console.Write("Enter start date (dd/mm/yyyy): ");
                     startDate = Console.ReadLine();
 
                     try
@@ -620,14 +635,14 @@ public class Logic
                     }
                     catch (Exception)
                     {
-                        Console.WriteLine("Invalid input!");
+                        Console.WriteLine("\nInvalid input!\n");
                         goto getSatrtDate;
                     }
                 }
 
                 getEndDate:
                 {
-                    Console.Write("Enter end date (dd/MM/yyyy): ");
+                    Console.Write("Enter end date (dd/mm/yyyy): ");
                     endDate = Console.ReadLine();
 
                     try
@@ -636,7 +651,7 @@ public class Logic
                     }
                     catch (Exception)
                     {
-                        Console.WriteLine("Invalid input!");
+                        Console.WriteLine("\nInvalid input!\n");
                         goto getEndDate;
                     }
                 }
@@ -646,8 +661,9 @@ public class Logic
                     (d1, d2) = (d2, d1);
                 }
 
-                List<Transaction> transactions = data.ReadFile<Transaction>("transactions.txt");
+                List<Transaction> transactions = data.ReadFile<Transaction>("transaction.txt");
                 Console.WriteLine("\n------ Search Results ------\n");
+
                 if (transactions.Count > 0)
                 {   
                     foreach (Transaction row in transactions)
@@ -662,22 +678,29 @@ public class Logic
                             $"Last Name: {row.LastName}\n" +
                             $"Amount: {row.TransactionAmount}\n" +
                             $"Date: {row.Date}\n");
+                            zeroRecords = false;
                         }
                     }
                 }
                 else
+                {
+                    Console.WriteLine("File is Empty!");
+                }
+
+                if (zeroRecords) 
                 {
                     Console.WriteLine("No Matching Data Found!");
                 }
             }
             else
             {
-                Console.WriteLine("Invalid Input!");
+                Console.WriteLine("\nInvalid Input!\n");
                 goto getOption;
             }
         }
     }
 
+    
     // Cutomer Menu ---------------------------------------------------
     
     // Cash Withdraw
@@ -722,13 +745,12 @@ public class Logic
                                 if (op=="1" || op=="2" || op=="3" || op=="4" || op=="5" || op=="6")
                                 {
                                     int opt = Convert.ToInt32(op);
-                                    Console.WriteLine($"You are withdrawing ${FastCashOptions[opt-1]}. Continue (Y/N)?");
+                                    Console.Write($"You are withdrawing ${FastCashOptions[opt-1]}. Continue (Y/N)? ");
                                     if (Console.ReadLine().ToLower().StartsWith("y"))
                                     {
-                                        
                                         // total withdrawal cannot exceed 600 per day
                                         double total = PerDayTransactions(user.AccountNo);
-
+                                        
                                         if ((total + FastCashOptions[opt - 1]) <= 600)
                                         {
                                             
@@ -743,7 +765,7 @@ public class Logic
                                                 Transaction transaction = CommitTransaction(user, FastCashOptions[opt-1], "Cash Withdraw");
 
                                                 // Print receipt
-                                                Console.Write("Print a receipt (Y/N)?");
+                                                Console.Write("Print a receipt (Y/N)? ");
                                                 if (Console.ReadLine().ToLower().StartsWith("y"))
                                                 {
                                                     PrintReceipt(transaction, "Withdraw");
@@ -785,7 +807,7 @@ public class Logic
                                     int userInput = Convert.ToInt32(Console.ReadLine());
                                     if (userInput%20==0)
                                     {
-                                        Console.WriteLine($"You are withdrawing ${userInput}. Continue (Y/N)?");
+                                        Console.Write($"You are withdrawing ${userInput}. Continue (Y/N)? ");
                                     }
                                     else
                                     {
@@ -812,7 +834,7 @@ public class Logic
                                                 Transaction transaction = CommitTransaction(user, amount, "Cash Withdraw");
 
                                                 // Print receipt
-                                                Console.Write("Print a receipt (Y/N)?");
+                                                Console.Write("Print a receipt (Y/N)? ");
                                                 if (Console.ReadLine().ToLower().StartsWith("y"))
                                                 {
                                                     PrintReceipt(transaction, "Withdraw");
@@ -868,7 +890,7 @@ public class Logic
 
         getAmount:
         {
-            Console.WriteLine("Enter the amount in multiples of 20: ");
+            Console.Write("Enter the amount in multiples of 20: ");
 
             try
             {
@@ -881,14 +903,14 @@ public class Logic
                     {
                         getAccountNo:
                         {
-                            Console.WriteLine("Enter the destination account number: ");
+                            Console.Write("Enter the destination account number: ");
                             try
                             {
                                 int accNo = Convert.ToInt32(Console.ReadLine());
                                 User receiver = new User();
                                 if (data.isInFile(accNo, out receiver))
                                 {
-                                    Console.WriteLine($"You wish to deposite ${amount} in account held by {receiver.FirstName+" "+receiver.LastName}\n" + "Please re-enter the account number to confirm: ");
+                                    Console.Write($"\nYou wish to deposite ${amount} in account held by {receiver.FirstName+" "+receiver.LastName}\n" + "Please re-enter the account number to confirm: ");
 
                                     try
                                     {
@@ -901,7 +923,7 @@ public class Logic
                                              // add to receiver balance
                                              AddToBalance(receiver, amount);
 
-                                             Console.WriteLine("Transaction confirmed!");
+                                             Console.WriteLine("\nTransaction confirmed!\n");
 
                                              // Commit Transaction - Sender account
                                              Transaction transaction = CommitTransaction(user, amount, "Cash Transfer");
@@ -910,7 +932,7 @@ public class Logic
                                              Transaction transaction1 = CommitTransaction(receiver, amount, "Cash Transfer");
 
                                              // Print receipt
-                                             Console.Write("Print a receipt (Y/N)?");
+                                             Console.Write("Print a receipt (Y/N)? ");
                                              if (Console.ReadLine().ToLower().StartsWith("y"))
                                              {
                                                  PrintReceipt(transaction, "Amount Transfered");
@@ -958,13 +980,13 @@ public class Logic
     }
 
     // Cash Deposite
-    public void CashDeposite(string username)
+    public void CashDeposit(string username)
     {
         User user = data.getCustomer(username);
 
         getAmount:
         {
-            Console.WriteLine("Enter the amount: ");
+            Console.Write("Enter the amount: ");
 
             try
             {
@@ -972,13 +994,13 @@ public class Logic
                  double amount = userInput;
                  // add to user balance
                  AddToBalance(user, amount);
-                 Console.WriteLine("Cash Deposited Successfully.");
+                 Console.WriteLine("\nCash Deposited Successfully.\n");
 
                  // commit transaction
                  Transaction transaction = CommitTransaction(user, amount, "Cash Deposite");
 
                  // Print receipt
-                 Console.Write("Print a receipt (Y/N)?");
+                 Console.Write("Print a receipt (Y/N)? ");
                  if (Console.ReadLine().ToLower().StartsWith("y"))
                  {
                      PrintReceipt(transaction, "Amount Deposited");
@@ -1010,7 +1032,7 @@ public class Logic
     {
         List<Transaction> list = data.ReadFile<Transaction>("transaction.txt");
         double totalAmt = 0;
-
+        
         foreach (Transaction row in list)
         {
             if (row.AccountNo == accNo)

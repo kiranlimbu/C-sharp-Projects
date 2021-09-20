@@ -1,15 +1,13 @@
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":100,"Date":"15/54/2021","Balance":4900}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":100,"Date":"15/55/2021","Balance":4800}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":60,"Date":"15/31/2021","Balance":4740}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":20,"Date":"15/32/2021","Balance":4720}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":20,"Date":"15/46/2021","Balance":4700}
 {"AccountNo":1,"UserName":"NvqnO","FirstName":"Aida","LastName":"Bugg","TransactionType":"","TransactionAmount":0,"Date":"14/10/2021","Balance":0}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash","TransactionAmount":35,"Date":"15/10/2021","Balance":5500}
-{"AccountNo":3,"UserName":"xvenay","FirstName":"Srijana","LastName":"Limbu","TransactionType":"Card","TransactionAmount":15,"Date":"14/10/2021","Balance":1500}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":20,"Date":"15/09/2021","Balance":4640}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":600,"Date":"15/09/2021","Balance":4040}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"15/09/2021","Balance":4020}
-{"AccountNo":3,"UserName":"xvenay","FirstName":"Srijana","LastName":"Limbu","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"15/09/2021","Balance":10020}
-{"AccountNo":3,"UserName":"xvenay","FirstName":"Srijana","LastName":"Limbu","TransactionType":"Cash Transfer","TransactionAmount":140,"Date":"15/09/2021","Balance":9880}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Transfer","TransactionAmount":140,"Date":"15/09/2021","Balance":4160}
-{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":1000,"Date":"15/09/2021","Balance":5160}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":20,"Date":"15/09/2021","Balance":5160}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":20,"Date":"20/09/2021","Balance":5120}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":20,"Date":"20/09/2021","Balance":5100}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"20/09/2021","Balance":5080}
+{"AccountNo":3,"UserName":"OevnaN","FirstName":"Brian","LastName":"Allan","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"20/09/2021","Balance":520}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"20/09/2021","Balance":5060}
+{"AccountNo":3,"UserName":"OevnaN","FirstName":"Brian","LastName":"Allan","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"20/09/2021","Balance":540}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"20/09/2021","Balance":5040}
+{"AccountNo":3,"UserName":"OevnaN","FirstName":"Brian","LastName":"Allan","TransactionType":"Cash Transfer","TransactionAmount":20,"Date":"20/09/2021","Balance":560}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":20,"Date":"20/09/2021","Balance":5060}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":100,"Date":"20/09/2021","Balance":5160}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":50,"Date":"20/09/2021","Balance":5210}

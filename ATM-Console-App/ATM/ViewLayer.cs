@@ -5,18 +5,22 @@ public class View
     Data data = new Data();
     User user = new User();
     Logic logic = new Logic();
+
+    // Login Menu
     public void login()
     {
-        bool isLoggedIn = false;
         int loginAttempt = 0;
+        // assit in detacting who is trying to login
         string un = "x"; // temp username variable
         bool nameMatch = false;
+        // avoid sending two messages
+        bool messageSent = false;
 
         Console.WriteLine("\n------ Login Screen ------\n");
 
         try
         {
-            while (!isLoggedIn)
+            while (true)
             {
                 Console.Write("Username: "); // input user name
                 string username = Console.ReadLine();
@@ -28,7 +32,7 @@ public class View
                 user.UserName = logic.encryption(username);
                 user.Pin = logic.encryption(userpin);
 
-                // check if there is a matching name
+                // store the matching name
                 // use it to disable account if needed
                 if (logic.nameMatch(user.UserName))
                 {
@@ -44,11 +48,12 @@ public class View
                     if (logic.isActive(user.UserName))
                     {
                         user.Role = role;
-                        isLoggedIn = true;
+                        break;
                     }
                     else
                     {
                         Console.WriteLine("\nYour account is disabled! Please contact your admin.\n");
+                        messageSent = true;
                         break;
                     }   
                 }
@@ -68,11 +73,13 @@ public class View
                             logic.disableAcc(un); // disable account
                             Console.WriteLine("\nYou missed 3 login attempts. Your acctount has been disabled.\n" +
                             "Please contact your admin.\n");
+                            messageSent = true;
                             break;
                         }
                         else // we don't know the user name
                         {
                             Console.WriteLine("\nYou missed 3 login attempts. Please try later!\n");
+                            messageSent = true;
                             break;
                         }
                     }
@@ -87,6 +94,10 @@ public class View
             {
                 customerMenu();
             }
+            else if (!messageSent)
+            {
+                Console.WriteLine("\nYou do not have proper authorization, please contact your Admin!\n");
+            }
         }
         catch (Exception)
         {
@@ -94,6 +105,7 @@ public class View
         }
     }
 
+    // Admin Menu
     public void adminMenu()
     {
         Console.Clear();
@@ -105,7 +117,7 @@ public class View
                           "5.  View Reports\n" +
                           "6.  Exit\n");
         
-        Console.Write("\nEnter your option: ");
+        Console.Write("\nPlease select your option: ");
         string option = Console.ReadLine(); // need safer way to parse
 
         if (option == "1")
@@ -152,7 +164,7 @@ public class View
 
         adminORlogin:
         {
-            Console.WriteLine("\nDo you want another operation (y/n)? ");
+            Console.Write("\nDo you want another operation (y/n)? ");
             string input = Console.ReadLine();
             if (input.ToLower().StartsWith("y"))
             {
@@ -182,7 +194,7 @@ public class View
                           "4.  Display Balance\n" +
                           "5.  Exit\n");
         
-        Console.Write("\nEnter your option: ");
+        Console.Write("\nPlease select your option: ");
         string option = Console.ReadLine(); // need safer way to parse
 
         if (option == "1")
@@ -201,7 +213,7 @@ public class View
         {
             Console.Clear();
             Console.WriteLine("\n------ Cash Deposit ------\n");
-            logic.CashDeposite(user.UserName);
+            logic.CashDeposit(user.UserName);
         }
         else if (option == "4")
         {
@@ -223,7 +235,7 @@ public class View
 
         custORlogin:
         {
-            Console.WriteLine("\nDo you want another operation (y/n)? ");
+            Console.Write("\nDo you want another operation (y/n)? ");
             string input = Console.ReadLine();
             if (input.ToLower().StartsWith("y"))
             {
