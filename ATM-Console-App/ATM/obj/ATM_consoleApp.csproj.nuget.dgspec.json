@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kiran\\Documents\\Coding Exercise\\C Sharp\\Projects\\ATM_consoleApp\\ATM_consoleApp.csproj": {}
+    "C:\\Users\\Kiran\\Desktop\\Github\\C-sharp-Projects\\ATM-Console-App\\ATM\\ATM_consoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kiran\\Documents\\Coding Exercise\\C Sharp\\Projects\\ATM_consoleApp\\ATM_consoleApp.csproj": {
+    "C:\\Users\\Kiran\\Desktop\\Github\\C-sharp-Projects\\ATM-Console-App\\ATM\\ATM_consoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kiran\\Documents\\Coding Exercise\\C Sharp\\Projects\\ATM_consoleApp\\ATM_consoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\Kiran\\Desktop\\Github\\C-sharp-Projects\\ATM-Console-App\\ATM\\ATM_consoleApp.csproj",
         "projectName": "ATM_consoleApp",
-        "projectPath": "C:\\Users\\Kiran\\Documents\\Coding Exercise\\C Sharp\\Projects\\ATM_consoleApp\\ATM_consoleApp.csproj",
+        "projectPath": "C:\\Users\\Kiran\\Desktop\\Github\\C-sharp-Projects\\ATM-Console-App\\ATM\\ATM_consoleApp.csproj",
         "packagesPath": "C:\\Users\\Kiran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kiran\\Documents\\Coding Exercise\\C Sharp\\Projects\\ATM_consoleApp\\obj\\",
+        "outputPath": "C:\\Users\\Kiran\\Desktop\\Github\\C-sharp-Projects\\ATM-Console-App\\ATM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
