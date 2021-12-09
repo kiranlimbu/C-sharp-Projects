@@ -11,3 +11,4 @@
 {"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":20,"Date":"20/09/2021","Balance":5060}
 {"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":100,"Date":"20/09/2021","Balance":5160}
 {"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Deposite","TransactionAmount":50,"Date":"20/09/2021","Balance":5210}
+{"AccountNo":2,"UserName":"QnivqL","FirstName":"David","LastName":"Young","TransactionType":"Cash Withdraw","TransactionAmount":20,"Date":"20/09/2021","Balance":5190}
