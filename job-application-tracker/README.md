@@ -1,2 +1,2 @@
-job-tracker-app = ReactJS file
-jobtrackerAPI = DotNet file
+job-tracker-app = ReactJS file <br>
+jobTrackerAPI = DotNet file
